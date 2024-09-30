@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="CHRISTHIAN STEPHEN ">
+
+    <title>Proyecto Digital  Desarrollo de Paginas y Aplicaciones Web Puerto Vallarta y todo Mexico</title>
+
+     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" /><!--ICONOS GG-->
+
+
+    <meta name="programador" content="christian stephen">
+<meta name="description" content=" Proyecto Digital Desarrollo de paginas y aplicaciones web  dedicado a crear sitios y aplicaciones que reflejen los valores y principios de tu negocio por medio del mundo digital. Comprometido con la excelencia técnica y la integridad ética en cada proyecto, utilizando mis habilidades para impactar positivamente en línea con mi trabajo.">
+<meta name="keywords" content="Desarrollo Web Puerto Vallarta Mexico, Desarrollador web de aplicaciones web, Sitios web acorde a las necesidades de tu negocio, Desarrollador web, Diseño web, Programación, programador web, Experto en desarrollo y hosting web, desarrollo digital">
+<meta name="robots" content="www.webdevelopermx.com, follow">
+<meta name="title" content="Desarrollo de paginas y aplicaciones Web 100% Personalizado | Métodos y Diseño Personalizado Dependiendo de las Necesidades de Tu negocio">
+<meta property="og:title" content="Puerto Vallarta Web Developer">
+<meta property="og:description" content="Proyecto Digital Desarrollo de paginas y aplicaciones web  dedicado a crear sitios y aplicaciones que reflejen los valores y principios de tu negocio por medio del mundo digital. Comprometido con la excelencia técnica y la integridad ética en cada proyecto, utilizando mis habilidades para impactar positivamente en línea con mi trabajo.">
+<meta property="og:image" content="/static/images/proyecto_digital2.png" type="image/png">
+    <link rel="stylesheet" href="{% static '/css/author.css' %}">
+    <link rel="stylesheet" href="{% static '/css/fuentes.css' %}"> <!-- Esto es para cargar fuentes nuevas -->
+    <link rel="icon" href="{%static '/images/logo_proyecto_digital.ico'%}" type="image/.ico">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><!--ESTO ES PARA LOS LOGOS DE REDES-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Base styles for scroll animations */
+        .scroll-fade {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 2s ease-in-out, transform 2s ease-in-out; /* Increased to 2s */
+        }
+
+        .scroll-fade.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Specific animations */
+        #sobre.visible {
+            animation: slideInLeft 2s forwards; /* Increased to 2s */
+        }
+
+        #tecnologias.visible {
+            animation: slideInRight 2s forwards; /* Increased to 2s */
+        }
+
+        #obten_mas_que_un_sitio_web.visible {
+            animation: fadeInUp 2s forwards; /* Increased to 2s */
+        }
+
+        #footer.visible {
+            animation: fadeInUp 2s forwards; /* Increased to 2s */
+        }
+
+        #galeria.visible {
+            animation: flipInY 2s forwards; /* Increased to 2s */
+        }
+
+        #contacto.visible {
+            animation: rubberBand 2s forwards; /* Increased to 2s */
+        }
+
+        /* Keyframe animations */
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-100%); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(100%); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes flipInY {
+            from { opacity: 0; transform: rotateY(-90deg); }
+            to { opacity: 1; transform: rotateY(0); }
+        }
+
+        @keyframes rubberBand {
+            0%, 100% { transform: scale(1); }
+            30% { transform: scale(1.1); }
+            50% { transform: scale(0.9); }
+            70% { transform: scale(1.03); }
+        }
+
+        /* Modal animation */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+            animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 80%;
+            animation: scaleIn 0.5s;
+        }
+
+        @keyframes scaleIn {
+            from { transform: scale(0); }
+            to { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="div_body">
+    <header>
+        <div class="div_imagen_teclado">
+            <img class="header_imagen" src="/static/images/imagen_teclado.png" alt="Teclado">
+            <div class="header-content">
+                <div class="project-info">
+                    <h1>PROYECTO DIGITAL</h1>
+                    <img class="logo" src="/static/images/proyecto_digital_logo2.png" alt="Logo">
+                    <h3>DESARROLLO WEB</h3>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="about_us">About Us </a></li>
+                        <li><a href="#tecnologias">Tecnologías</a></li>
+                        <li><a href="#galeria">Galería</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+               
+    </header>
+
+    <section id="sobre" class="scroll-fade">
+        <h2>Para Empezar</h2>
+        <p>En primer lugar haremos una pequeña reunión, en la cual estarán presentes nuestros profesionales en diseño y desarrollo web...</p>
+    </section>
+
+    <section id="tecnologias" class="scroll-fade">
+        <h2>Tecnologías Utilizadas</h2>
+        <p class="project-description">Para el desarrollo de tu proyecto, trabajamos con diversas tecnologías...</p>
+        <ul class="tech-list">
+            <li class="django"><strong>Django:</strong></li>
+            <li class="html5"><strong>HTML5:</strong></li>
+            <li class="python"><strong>Python:</strong></li>
+            <li class="css3"><strong>CSS3:</strong></li>
+            <li class="javascript"><strong>JavaScript:</strong></li>
+            <li class="mysql"><strong>mySQL:</strong></li>
+        </ul>
+    </section>
+
+    <section id="obten_mas_que_un_sitio_web" class="scroll-fade">
+        <h2>Obten más que un Sitio Web</h2>
+        <p>Los servicios de diseño WEB requieren, hospedaje, dominio, mantenimiento y más…</p>
+        <ul class="service-list">
+            <li class="item-1"><strong>Diseño Web 100% Personalizado:</strong> No usamos plantillas prediseñadas...</li>
+            <li class="item-2"><strong>Adaptación a dispositivos móviles:</strong> Nuestros diseños son 100% flexibles...</li>
+            <li class="item-3"><strong>Posicionamiento Web:</strong> Realizamos estrategias de posicionamiento...</li>
+            <li class="item-4"><strong>Posters Profesionales:</strong> Realizamos Posters Profesionales para todo tipo de eventos...</li>
+            <li class="item-5"><strong>Mantenimiento Mensual:</strong> Realizamos Mantenimiento de sitios Web...</li>
+            <li class="item-6"><strong>Migracion de Dominios:</strong> Migracion de dominios y Correos Empresariales...</li>
+            <li style="background: linear-gradient(135deg, #48e, #fff9c4)" class="item-7"><strong>Mantenimiento de Software:</strong> Instalación de programas, mantenimiento de sistemas y restauración de sistemas operativos...</li>
+            <li  style="background: linear-gradient(135deg, #bbdefb, #e1f5fe)" class="item-8"><strong >Promociones:</strong> Tenemos los mejores precios del mercado con hasta un 50% de descuento...</li>
+        </ul>
+
+
+    </section>
+
+    <section id="galeria" class="scroll-fade">
+        <h2>Desarrollamos todo tipo de Proyectos</h2>
+        <div class="flex-container">
+            <ul class="grid-list">
+                <li class="list-item item-1">Restaurantes...</li>
+                <li class="list-item item-2">Bares...</li>
+                <li class="list-item item-3">Abogados...</li>
+                <li class="list-item item-4">Spa, Masajes, Estéticas...</li>
+                <li class="list-item item-5">Agencias de Viajes...</li>
+                <li class="list-item item-6">Bienes raíces, Ventas, Rentas en General...</li>
+                <li class="list-item item-7">Agencias de tours...</li>
+                <li class="list-item item-8">Fundaciones...</li>
+                <li class="list-item item-9">Métodos de Reservas, Suscripciones Mensuales, Pagos con Tarjeta y más...</li>
+                <li class="list-item item-10">Todo tipo de negocio lo podemos convertir en software...</li>
+                <li style="background: linear-gradient(135deg, #a0d8ef, #48e)" class="list-item item-11">Explora nuestra galería que captura los aspectos más destacados del proyecto, estamos anciosos de empezar con el tuyo!...</li>
+            </ul>
+        </div>
+
+
+        </ul>
+        <p></p>
+        <div class="galeria">
+            <img src="{% static '/images/prest_app.jpg' %}" alt="Proyecto Digital aplicaciones" onclick="openModal(this.src)">
+            <img src="{% static '/images/odontologo.png' %}" alt="desarrollo web puerto vallarta" onclick="openModal(this.src)">
+            <img src="{% static '/images/real_state.png' %}" alt="paginas web puerto vallarta" onclick="openModal(this.src)">
+            <img src="{% static '/images/bars.png' %}" alt="Proyecto Digital paginas web" onclick="openModal(this.src)">
+        </div>
+    </section>
+
+
+
+
+
+
+        <form method="post"  id="contacto" class="scroll-fade">
+
+            <p class="contacto_p">Si tienes preguntas, comentarios o deseas más información sobre nuestros servicios...</p>
+            {% csrf_token %}
+            <div>
+                <label for="{{ form.name.id_for_label }}">Nombre:</label>
+                {{ form.name }}
+            </div>
+            <div>
+                <label for="{{ form.email.id_for_label }}">Correo Electrónico:</label>
+                {{ form.email }}
+            </div>
+            <div>
+                <label for="{{ form.phone.id_for_label }}">Número de Teléfono:</label>
+                {{ form.phone }}
+            </div>
+            <div>
+                <label for="{{ form.message.id_for_label }}">Mensaje:</label>
+                {{ form.message }}
+            </div>
+
+            <button type="submit">Enviar</button>
+        </form>
+
+        <div class="mensaje_alerta">
+            {% if messages %}
+            {% for message in messages %}
+                <div  class="alert alert-{{ message.tags }}">
+                    {{ message }}
+
+            {% endfor %}
+            {% endif %}
+            </div>
+        </div>
+        <footer id="footer" class="scroll-fade">
+
+
+            <p id="footer-copy">&copy; 2024 Proyecto Digital. Todos los derechos reservados.</p>
+
+            <p id="footer-contact">
+                Contactanos:
+                <a href="enviar_email" id="footer-email">proyectodigitalmexico@gmail.com</a> |
+                <span id="footer-phone">+1 (615) 938-0458</span>
+            </p>
+
+            <div id="social-links">
+                <a href="https://wa.me/+16159380458" target="_blank" id="whatsapp-link">WhatsApp</a>
+                <a href="https://www.facebook.com/profile.php?id=61553413180841" target="_blank" id="facebook-link">Facebook</a>
+                <a href="https://www.webdevelopermx.com" target="_blank" id="website-link">Website</a>
+            </div>
+
+            <div id="social-icons">
+                <a href="https://wa.me/+16159380458" target="_blank" id="whatsapp-icon"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=61553413180841" target="_blank" id="facebook-icon"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.webdevelopermx.com" target="_blank" id="website-icon"><i class="fas fa-globe"></i></a>
+            </div>
+
+            <p id="footer-links">
+                <a href="politica_privacidad" id="privacy-policy-link">Politica de Privacidad</a> |
+                <a href="terminos_condiciones" id="terms-of-service-link">Terminos del Servicio</a>
+            </p>
+
+            <p id="footer-quick-links">
+                <a href="#galeria" id="about-link">Acerca de Nosotros</a> |
+                <a href="#obten_mas_que_un_sitio_web" id="services-link">Servicios</a>
+            </p>
+
+            <form id="newsletter-form" action="{% url 'subscribe' %}" method="POST">
+                {% csrf_token %}
+                <label for="newsletter-email" id="newsletter-email-label">Subscribe to our newsletter</label>
+                <input type="email" name="email" id="newsletter-email" placeholder="Enter your email" required>
+                <button type="submit" id="newsletter-button">Subscribe</button>
+            </form>
+        </footer>
+
+
+
+    <!-- Modal for images -->
+    <div id="modal" class="modal" onclick="closeModal()">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modal-img">
+        <div id="caption"></div>
+    </div>
+
+    <script>
+        function openModal(src) {
+            document.getElementById("modal-img").src = src;
+            document.getElementById("modal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("modal").style.display = "none";
+        }
+//////////////////////////////////////////////////////////////////////////////////////////
+        // Add scroll animations
+        document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll('#sobre, #tecnologias, #obten_mas_que_un_sitio_web, #footer, #galeria, #contacto');
+
+            const options = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1 // Adjust this value as needed
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, options);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</div> <!-- CIERRE DIV BODY-->
+</body>
+</html>

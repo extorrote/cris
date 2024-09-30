@@ -1,0 +1,100 @@
+<section id="sobre" class="scroll-fade" style="background-color: #049DBF; padding: 40px; border-radius: 10px; color: #ffffff; text-align: center;">
+    <h2 style="color: #FFD700; font-size: 2.5em;">Acerca de Nosotros</h2>
+    <p style="font-size: 1.2em;">
+        En <strong>Proyecto Digital</strong>, somos un equipo de profesionales apasionados por el desarrollo web. Nuestra misión es crear sitios y aplicaciones que no solo reflejen los valores y principios de tu negocio, sino que también ofrezcan una experiencia digital excepcional.
+    </p>
+    
+    <h3 style="color: #FFD700; font-size: 2em;">¿Qué hacemos?</h3>
+    <ul style="list-style-type: none; padding: 0; display: flex; flex-wrap: wrap; justify-content: center;">
+        <li class="animate-item" style="background-color: #FF6F61; margin: 15px; padding: 20px; border-radius: 8px; flex: 0 1 90%; max-width: 600px;">
+            <strong>Diseño Web 100% Personalizado:</strong> Nuestros diseños son únicos, evitando el uso de plantillas prediseñadas.
+        </li>
+        <li class="animate-item" style="background-color: #6C5B7F; margin: 15px; padding: 20px; border-radius: 8px; flex: 0 1 90%; max-width: 600px;">
+            <strong>Adaptación a Dispositivos Móviles:</strong> Todos nuestros sitios son responsivos y se ven bien en cualquier dispositivo.
+        </li>
+        <li class="animate-item" style="background-color: #F67280; margin: 15px; padding: 20px; border-radius: 8px; flex: 0 1 90%; max-width: 600px;">
+            <strong>Posicionamiento Web:</strong> Implementamos estrategias efectivas para mejorar la visibilidad de tu negocio en línea.
+        </li>
+        <li class="animate-item" style="background-color: #C06C84; margin: 15px; padding: 20px; border-radius: 8px; flex: 0 1 90%; max-width: 600px;">
+            <strong>Mantenimiento Mensual:</strong> Ofrecemos mantenimiento continuo para asegurar que tu sitio esté siempre en óptimas condiciones.
+        </li>
+        <li class="animate-item" style="background-color: #355C7D; margin: 15px; padding: 20px; border-radius: 8px; flex: 0 1 90%; max-width: 600px;">
+            <strong>Migración de Dominios:</strong> Facilitamos la transición a nuevas plataformas sin complicaciones.
+        </li>
+    </ul>
+    
+    <h3 style="color: #FFD700; font-size: 2em;">Nuestra Meta</h3>
+    <p style="font-size: 1.2em;">
+        Nuestra meta es empoderar a cada negocio con las herramientas digitales necesarias para crecer y prosperar en un mundo cada vez más conectado. Buscamos ser el socio tecnológico de confianza que potencie tu éxito.
+    </p>
+    
+    <h3 style="color: #FFD700; font-size: 2em;">Nuestro Enfoque</h3>
+    <p style="font-size: 1.2em;">
+        Comenzamos cada proyecto con una reunión inicial para comprender tus objetivos y expectativas. Nuestro equipo de diseño y desarrollo trabaja de la mano contigo para asegurar que cada aspecto del proyecto esté alineado con tu visión.
+    </p>
+    
+    <p style="font-size: 1.2em;">
+        En <strong>Proyecto Digital</strong>, no solo construimos sitios web, creamos soluciones que impulsan tu negocio hacia el éxito en el mundo digital.
+    </p>
+    
+    <h3 style="color: #FFD700; font-size: 2em;">Contáctanos</h3>
+    <p style="font-size: 1.2em;">
+        Si deseas más información sobre nuestros servicios o tienes alguna pregunta, no dudes en ponerte en contacto. Estamos aquí para ayudarte a dar el siguiente paso en tu viaje digital.
+    </p>
+    
+    <a href="{% url 'inicio' %}" style="text-decoration: none;">
+        <button style="background-color: #FFD700; color: #049DBF; padding: 15px 30px; border: none; border-radius: 5px; font-size: 1.2em; cursor: pointer; margin-top: 20px;">
+            Regresar al Inicio
+        </button>
+    </a>
+</section>
+
+<style>
+    .animate-item {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.3s ease;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        flex: 1 1 100%; /* Full width on small screens */
+        max-width: 100%; /* Prevents exceeding screen width */
+    }
+
+    @media (min-width: 600px) {
+        .animate-item {
+            flex: 0 1 45%; /* Increased width on larger screens */
+            max-width: 400px; /* Max width on larger screens */
+        }
+    }
+
+    .animate-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const items = document.querySelectorAll('.animate-item');
+        const observerOptions = {
+            root: null,
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        items.forEach(item => {
+            observer.observe(item);
+        });
+    });
+</script>
